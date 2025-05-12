@@ -567,6 +567,84 @@
         .about-content p:hover::before {
             transform: scale(1);
         }
+
+        /* 隐私政策样式 */
+        #privacy {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(30,30,30,0.7);
+            border-radius: 20px;
+        }
+
+        #privacy h2 {
+            margin-bottom: 30px;
+        }
+
+        #privacy h3 {
+            color: var(--secondary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        #privacy ul {
+            margin-left: 20px;
+            list-style-type: none;
+        }
+
+        #privacy li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        #privacy li::before {
+            content: "•";
+            color: var(--secondary);
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+            line-height: 0.8;
+        }
+
+        /* 免责声明样式 */
+        #disclaimer {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 40px auto;
+            border-top: 1px solid rgba(255,215,0,0.2);
+        }
+
+        #disclaimer h2 {
+            margin-bottom: 25px;
+        }
+
+        #disclaimer ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+
+        #disclaimer li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        #disclaimer li::before {
+            content: "•";
+            color: var(--secondary);
+            position: absolute;
+            left: 0;
+            font-size: 1.8em;
+            line-height: 0.8;
+        }
+
+        #disclaimer div {
+            background: rgba(106,48,147,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 3px solid var(--secondary);
+        }
         
         /* 现代化的页脚 */
         footer {
@@ -682,6 +760,10 @@
                 bottom: 30px;
                 right: 30px;
             }
+
+            #privacy, #disclaimer {
+                padding: 40px 15px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -728,6 +810,10 @@
             .whatsapp-float img {
                 width: 40px;
                 height: 40px;
+            }
+
+            #privacy li, #disclaimer li {
+                padding-left: 20px;
             }
         }
     </style>
@@ -870,6 +956,55 @@
         </div>
     </section>
 
+    <!-- 隐私政策 -->
+    <section id="privacy">
+        <h2 data-translate="privacy_title">Құпиялылық саясаты</h2>
+        <div>
+            <p><strong data-translate="privacy_lastupdate">Соңғы жаңарту: 2023 жылғы 12 желтоқсан</strong></p>
+
+            <h3 data-translate="privacy_collect_title">1. Ақпарат жинау</h3>
+            <p data-translate="privacy_collect_text">WhatsApp арқылы хабарласқанда, біз мыналарды жинаймыз:</p>
+            <ul>
+                <li data-translate="privacy_collect1">Сіздің аты-жөніңіз, туған күніңіз, байланыс ақпаратыңыз</li>
+                <li data-translate="privacy_collect2">Консультация мазмұны және фотосуреттер (қол сызықтары үшін)</li>
+                <li data-translate="privacy_collect3">Құрылғы ақпараты (IP мекенжайы, браузер түрі)</li>
+            </ul>
+
+            <h3 data-translate="privacy_use_title">2. Ақпаратты қолдану</h3>
+            <p data-translate="privacy_use_text">Деректер тек келесі мақсаттарда қолданылады:</p>
+            <ul>
+                <li data-translate="privacy_use1">Жеке кеңес беру және тапсырыс орындау</li>
+                <li data-translate="privacy_use2">Қызмет сапасын жақсарту</li>
+                <li><em data-translate="privacy_use3">Деректерді үшінші тарапқа сатпаймыз</em></li>
+            </ul>
+
+            <h3 data-translate="privacy_security_title">3. Қауіпсіздік</h3>
+            <p data-translate="privacy_security_text">WhatsApp шифрлау технологиясын қолданамыз. Жергілікті серверлер Алматы қаласында орналасқан.</p>
+
+            <h3 data-translate="privacy_rights_title">4. Сіздің құқықтарыңыз</h3>
+            <p data-translate="privacy_rights_text">Қазақстанның "Жеке деректер туралы" Заңы бойынша:</p>
+            <ul>
+                <li data-translate="privacy_rights1">Деректерді өшіруді сұрау</li>
+                <li data-translate="privacy_rights2">Түзетулер енгізу</li>
+                <li data-translate="privacy_rights3">Шағымдану (<a href="https://www.gov.kz" style="color: var(--accent);">www.gov.kz</a> арқылы)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 免责声明 -->
+    <section id="disclaimer">
+        <h2 data-translate="disclaimer_title">Жауапкершіліктен бас тарту</h2>
+        <div>
+            <ul>
+                <li data-translate="disclaimer1">Ұсынылған кеңестер психологиялық бағдарлама ғана, дәрігерлік көмекті ауыстырмайды</li>
+                <li data-translate="disclaimer2">Энергиялық бұйымдардың әсері жеке тәжірибеге байланысты</li>
+                <li data-translate="disclaimer3">Фэн-шуй әдістері ғылыми дәлелденбеген, діни наным емес</li>
+                <li data-translate="disclaimer4">Клиент шешімдері үшін "Ішкі Айна" жауапкершілік алмайды</li>
+            </ul>
+            <p style="margin-top: 20px; font-style: italic;" data-translate="disclaimer_note">Қызметтерді пайдаланған кезде сіз осы шарттармен келісесіз</p>
+        </div>
+    </section>
+
     <!-- 现代化的页脚 -->
     <footer>
         <p data-translate="footer_text">© 2023 Ішкі Айна - Психология және фэн-шуй кеңесі</p>
@@ -918,6 +1053,31 @@
                 "about_text1": "我们是一支致力于将心理学与东方智慧结合的独立团队，专注于通过科学化、哲学化的视角，探索人—空间—命运之间的关系。在中亚广袤的土地上，我们用简洁、理性的语言，帮助用户洞察生活节奏，理解自身命运。",
                 "about_text2": "本页面展示的产品，皆为我们精选并长期实测的能量摆件，不涉及任何宗教内容，仅以\"心理调节\"\"空间能量引导\"为核心设计原则。",
                 "about_text3": "服务以WhatsApp一对一私聊为主，尊重隐私，深度定制。我们不夸大，不迷信，只做真实有效的引导。",
+                "privacy_title": "隐私政策",
+                "privacy_lastupdate": "最后更新：2023年12月12日",
+                "privacy_collect_title": "1. 信息收集",
+                "privacy_collect_text": "当您通过WhatsApp联系我们时，我们可能收集：",
+                "privacy_collect1": "您的姓名、出生日期、联系方式",
+                "privacy_collect2": "咨询内容及相关照片（手相分析用）",
+                "privacy_collect3": "设备信息（IP地址、浏览器类型）",
+                "privacy_use_title": "2. 信息使用",
+                "privacy_use_text": "数据仅用于以下目的：",
+                "privacy_use1": "提供咨询服务和订单处理",
+                "privacy_use2": "改善服务质量",
+                "privacy_use3": "我们不会将数据出售给第三方",
+                "privacy_security_title": "3. 安全",
+                "privacy_security_text": "我们使用WhatsApp端到端加密技术。本地服务器位于阿拉木图市。",
+                "privacy_rights_title": "4. 您的权利",
+                "privacy_rights_text": "根据哈萨克斯坦《个人数据保护法》：",
+                "privacy_rights1": "要求删除您的个人数据",
+                "privacy_rights2": "要求更正数据",
+                "privacy_rights3": "投诉至监管机构（通过<a href='https://www.gov.kz' style='color: var(--accent);'>www.gov.kz</a>）",
+                "disclaimer_title": "免责声明",
+                "disclaimer1": "提供的咨询服务仅为心理学指导，不能替代医疗建议",
+                "disclaimer2": "能量摆件效果因人而异",
+                "disclaimer3": "风水方法未经科学验证，不属于宗教信仰",
+                "disclaimer4": "客户自行承担决策后果，\"内在之镜\"不承担责任",
+                "disclaimer_note": "使用服务即表示您同意这些条款",
                 "footer_text": "© 2023 内在之镜 - 心理学与风水能量咨询"
             },
             kz: {
@@ -955,6 +1115,31 @@
                 "about_text1": "Психология мен шығыс даналығын біріктіретін тәуелсіз топпыз. Ғылыми-философиялық көзқараспен адам-кеңістік-тағдыр қатынастарын зерттейміз. Орта Азияның кең даласында қарапайым, ұтымды тілмен пайдаланушыларға өмір ритмін түсінуге және жеке тағдырды қабылдауға көмектесеміз.",
                 "about_text2": "Бетте көрсетілген өнімдер - біздің ұзақ уақыт бойы сынап таңдаған энергетикалық бұйымдарымыз. Діни мазмұн жоқ, тек \"психологиялық реттеу\" мен \"кеңістік энергиясын басқару\" принциптеріне негізделген.",
                 "about_text3": "Қызмет WhatsApp арқылы жеке сұхбат түрінде ұсынылады, құпиялылық құрметтеледі және терең жекелендіру қолданылады. Біз асыра сілтеулер жасамаймыз, әдет-ғұрыптарға сенбейміз, тек шынайы және тиімді жол көрсетеміз.",
+                "privacy_title": "Құпиялылық саясаты",
+                "privacy_lastupdate": "Соңғы жаңарту: 2023 жылғы 12 желтоқсан",
+                "privacy_collect_title": "1. Ақпарат жинау",
+                "privacy_collect_text": "WhatsApp арқылы хабарласқанда, біз мыналарды жинаймыз:",
+                "privacy_collect1": "Сіздің аты-жөніңіз, туған күніңіз, байланыс ақпаратыңыз",
+                "privacy_collect2": "Консультация мазмұны және фотосуреттер (қол сызықтары үшін)",
+                "privacy_collect3": "Құрылғы ақпараты (IP мекенжайы, браузер түрі)",
+                "privacy_use_title": "2. Ақпаратты қолдану",
+                "privacy_use_text": "Деректер тек келесі мақсаттарда қолданылады:",
+                "privacy_use1": "Жеке кеңес беру және тапсырыс орындау",
+                "privacy_use2": "Қызмет сапасын жақсарту",
+                "privacy_use3": "Деректерді үшінші тарапқа сатпаймыз",
+                "privacy_security_title": "3. Қауіпсіздік",
+                "privacy_security_text": "WhatsApp шифрлау технологиясын қолданамыз. Жергілікті серверлер Алматы қаласында орналасқан.",
+                "privacy_rights_title": "4. Сіздің құқықтарыңыз",
+                "privacy_rights_text": "Қазақстанның \"Жеке деректер туралы\" Заңы бойынша:",
+                "privacy_rights1": "Деректерді өшіруді сұрау",
+                "privacy_rights2": "Түзетулер енгізу",
+                "privacy_rights3": "Шағымдану (<a href='https://www.gov.kz' style='color: var(--accent);'>www.gov.kz</a> арқылы)",
+                "disclaimer_title": "Жауапкершіліктен бас тарту",
+                "disclaimer1": "Ұсынылған кеңестер психологиялық бағдарлама ғана, дәрігерлік көмекті ауыстырмайды",
+                "disclaimer2": "Энергиялық бұйымдардың әсері жеке тәжірибеге байланысты",
+                "disclaimer3": "Фэн-шуй әдістері ғылыми дәлелденбеген, діни наным емес",
+                "disclaimer4": "Клиент шешімдері үшін \"Ішкі Айна\" жауапкершілік алмайды",
+                "disclaimer_note": "Қызметтерді пайдаланған кезде сіз осы шарттармен келісесіз",
                 "footer_text": "© 2023 Ішкі Айна - Психология және фэн-шуй кеңесі"
             },
             ru: {
@@ -992,6 +1177,31 @@
                 "about_text1": "Мы независимая команда, объединяющая психологию и восточную мудрость. Через научно-философский подход исследуем взаимосвязи человек-пространство-судьба. На просторах Центральной Азии мы помогаем клиентам понимать ритмы жизни и осознавать свою судьбу через ясный, рациональный язык.",
                 "about_text2": "Представленные на странице продукты - это тщательно отобранные и долгосрочно тестированные нами энергетические изделия. Не содержат религиозного контекста, основаны исключительно на принципах \"психологической регуляции\" и \"направления пространственной энергии\".",
                 "about_text3": "Услуги предоставляются через индивидуальные чаты в WhatsApp с уважением к конфиденциальности и глубокой персонализацией. Мы не преувеличиваем, не суеверны, предлагаем только реальные и эффективные методы.",
+                "privacy_title": "Политика конфиденциальности",
+                "privacy_lastupdate": "Последнее обновление: 12 декабря 2023",
+                "privacy_collect_title": "1. Сбор информации",
+                "privacy_collect_text": "При обращении через WhatsApp мы можем собирать:",
+                "privacy_collect1": "Ваше имя, дата рождения, контактные данные",
+                "privacy_collect2": "Содержание консультации и фотографии (для анализа линий руки)",
+                "privacy_collect3": "Информация об устройстве (IP-адрес, тип браузера)",
+                "privacy_use_title": "2. Использование информации",
+                "privacy_use_text": "Данные используются только для:",
+                "privacy_use1": "Предоставления консультаций и обработки заказов",
+                "privacy_use2": "Улучшения качества услуг",
+                "privacy_use3": "Мы не продаем данные третьим лицам",
+                "privacy_security_title": "3. Безопасность",
+                "privacy_security_text": "Используем сквозное шифрование WhatsApp. Локальные серверы расположены в Алматы.",
+                "privacy_rights_title": "4. Ваши права",
+                "privacy_rights_text": "Согласно Закону РК \"О персональных данных\":",
+                "privacy_rights1": "Запрос на удаление ваших данных",
+                "privacy_rights2": "Запрос на исправление данных",
+                "privacy_rights3": "Подача жалобы в регулирующие органы (через <a href='https://www.gov.kz' style='color: var(--accent);'>www.gov.kz</a>)",
+                "disclaimer_title": "Отказ от ответственности",
+                "disclaimer1": "Консультации носят психологический характер и не заменяют медицинскую помощь",
+                "disclaimer2": "Эффект энергетических изделий индивидуален",
+                "disclaimer3": "Методы фэн-шуй не имеют научного подтверждения и не являются религией",
+                "disclaimer4": "Клиент несет ответственность за свои решения, \"Зеркало Души\" не отвечает за последствия",
+                "disclaimer_note": "Использование услуг означает согласие с этими условиями",
                 "footer_text": "© 2023 Зеркало Души - Психология и консультации фэн-шуй"
             }
         };
@@ -1008,7 +1218,11 @@
             document.querySelectorAll('[data-translate]').forEach(el => {
                 const key = el.dataset.translate;
                 if (translations[lang] && translations[lang][key]) {
-                    el.textContent = translations[lang][key];
+                    if (el.tagName === 'INPUT') {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.innerHTML = translations[lang][key];
+                    }
                 }
             });
         }
@@ -1067,17 +1281,4 @@
         });
     </script>
 </body>
-    <!-- === 免责声明 Start === -->
-<div id="disclaimer" style="background: #999; padding: 15px; margin-top: 30px; border-radius: 5px; font-size: 14px;">
-    <p data-lang="zh"><strong>Құпия мәлімдеме：</strong>Бұл қызмет психология және шығыс мәдениетіне негізделген, медициналық немесе заңды кеңес емес。</p>
-    <p data-lang="kz" style="display:none;"><strong>Құпия мәлімдеме：</strong>Бұл қызмет психология және шығыс мәдениетіне негізделген, медициналық немесе заңды кеңес емес.</p>
-    <p data-lang="ru" style="display:none;"><strong>Отказ от ответственности：</strong>Этот сервис основан на психологии и восточной культуре, не является медицинской или юридической консультацией.</p>
-</div>
-
-<script>
-// 自动匹配当前语言
-const currentLang = localStorage.getItem('language') || 'zh';
-document.querySelector(`[data-lang="${currentLang}"]`).style.display = 'block';
-</script>
-<!-- === 免责声明 End === -->
 </html>
